@@ -1,12 +1,13 @@
+//Feito por Enzo, Jean e Thomas 3-F.
 //quando a página for carregada, o site carrega a function principal.
 document.addEventListener("DOMContentLoaded", function() {
 	
+    //O funcionamento dos modos ficou nesse modelo, cada option tem uma function, e cada uma delas altera a cor dos objetos do site para cada tipo de daltonismo e também para o modo contraste. (O cor padrão é para voltar as cores originais).
     document.getElementById("CorPadrao").addEventListener("click", function(){
 
         CorPadrao();
 
         function CorPadrao(){
-            //O CorPadrao é igual aos outros, com a diferença sendo as cores, apenas.
             document.body.style.backgroundColor = "white";
             document.querySelector("h1").style.color = "black";
             
@@ -219,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let indice = 1;
     document.getElementById("tamanhoFonte").addEventListener("click", function(){
 
-		//Os elementos com a classe texto são armazenados em "textos", depois para cada um, o tamanho atual é alterado para o novo valor, dentro da var tamanhos. O índice então aumenta em 1, e vai ser retornado ao valor original após o 4º valor.
+		//Os elementos com a classe texto são armazenados em "textos", depois para cada um, o tamanho atual é alterado para o novo valor, dentro da var tamanhos. O índice então aumenta em 1, e vai ser retornado ao valor original após o 4º valor (através do operador % "módulo").
         let textos = document.querySelectorAll(".texto"); 
             
             textos.forEach(texto => {
